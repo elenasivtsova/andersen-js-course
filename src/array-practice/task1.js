@@ -15,8 +15,8 @@
  * console.log(any([0, 0, 0, 0])); -> false
  */
 
-export function any(array, callback) {
-    return !!(!callback && array.some(x=> !!x) || callback && array.some(callback));
+export function any(array, callback = x => !!x) {
+    return !!(array.some(callback));
 }
 
 // export function any(array, callback) {
