@@ -17,18 +17,18 @@
  */
 
 export function arrayDiff(arrayOne, arrayTwo) {
-    let arrayResult = [];
-    let check = (array1, array2) => {
-        return array1.reduce((res, item) => {
-            if (array2.indexOf(item) < 0) {
-                res.push(item);
-            }
-            return res;
-        }, []);
-    };
+  let arrayResult = [];
+  let check = (array1, array2) => {
+    return array1.reduce((res, item) => {
+      if (array2.indexOf(item) < 0) {
+        res.push(item);
+      }
+      return res;
+    }, []);
+  };
 
-    arrayResult = [...arrayResult, check(arrayOne, arrayTwo)];
-    arrayResult = [...arrayResult, check(arrayTwo, arrayOne)];
+  arrayResult = [...arrayResult, check(arrayOne, arrayTwo)];
+  arrayResult = [...arrayResult, check(arrayTwo, arrayOne)];
 
-    return arrayResult;
+  return arrayResult;
 }

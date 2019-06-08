@@ -16,16 +16,16 @@
  * Для задач на array-practice импортируйте написанные функции сюда и проверяйте их работу тут.
  */
 
-import {any} from "./array-practice/task1";
-import {arrayDiff} from "./array-practice/task2";
-import {forEachRight} from "./array-practice/task3";
-import {union} from "./array-practice/task4";
-import {createGenerator} from "./array-practice/task5";
-import {transformArrayToNumber} from "./array-practice/task6";
-import {take} from "./array-practice/task7";
-import {without} from "./array-practice/task8";
-import {indexOfAll} from "./array-practice/task9";
-import {membersOnActiveMeetups} from "./array-practice/task10";
+import { any } from './array-practice/task1';
+import { arrayDiff } from './array-practice/task2';
+import { forEachRight } from './array-practice/task3';
+import { union } from './array-practice/task4';
+import { createGenerator } from './array-practice/task5';
+import { transformArrayToNumber } from './array-practice/task6';
+import { take } from './array-practice/task7';
+import { without } from './array-practice/task8';
+import { indexOfAll } from './array-practice/task9';
+import { membersOnActiveMeetups } from './array-practice/task10';
 
 console.log('1=============ARRAY-PRACTICE=============');
 
@@ -75,7 +75,6 @@ console.log('8=============');
 console.log(without([2, 1, 2, 3], 1, 2)); // [3]
 console.log(without([2, 1, 10, 20], 1, 2)); // [10, 20]
 
-
 console.log('9=============');
 
 console.log(indexOfAll([1, 2, 3, 1, 2, 3], 1)); // [0, 3]
@@ -84,26 +83,26 @@ console.log(indexOfAll([1, 2, 3], 4)); // []
 console.log('10=============');
 
 const meetups = [
-    {name: 'JavaScript', isActive: true, members: 100},
-    {name: 'Angular', isActive: true, members: 900},
-    {name: 'Node', isActive: false, members: 600},
-    {name: 'React', isActive: true, members: 500}
+  { name: 'JavaScript', isActive: true, members: 100 },
+  { name: 'Angular', isActive: true, members: 900 },
+  { name: 'Node', isActive: false, members: 600 },
+  { name: 'React', isActive: true, members: 500 },
 ];
 
 console.log(membersOnActiveMeetups(meetups));
 
 //----------------------------------------------------------------------------------//
 
-import {task1Old, task1New} from './es-features/task1';
-import {task2Old, task2New} from './es-features/task2';
-import {task3Old, task3New} from './es-features/task3';
-import {task4Old, task4New} from './es-features/task4';
-import {task5Old, task5New} from './es-features/task5';
-import {task6Old, task6New} from './es-features/task6';
-import {task7Old, task7New} from './es-features/task7';
-import {task8Old, task8New} from './es-features/task8';
-import {task9Old, task9New} from './es-features/task9';
-import {task10Old, task10New} from './es-features/task10';
+import { task1Old, task1New } from './es-features/task1';
+import { task2Old, task2New } from './es-features/task2';
+import { task3Old, task3New } from './es-features/task3';
+import { task4Old, task4New } from './es-features/task4';
+import { task5Old, task5New } from './es-features/task5';
+import { task6Old, task6New } from './es-features/task6';
+import { task7Old, task7New } from './es-features/task7';
+import { task8Old, task8New } from './es-features/task8';
+import { task9Old, task9New } from './es-features/task9';
+import { task10Old, task10New } from './es-features/task10';
 
 console.log('1=============ES-FEATURES=============');
 console.log('task1 old', task1Old(10) === 500); // true
@@ -126,8 +125,8 @@ console.log('task4 new', task4New()); // {x: 10, y: 10, bar: function, baztest: 
 
 console.log('5=============');
 
-console.log('task5 old', task5Old(['test', 42], {name: 'foo', val: 7})); // ['test', 42, 'foo', 7]
-console.log('task5 new', task5New(['test', 42], {name: 'foo', val: 7})); // ['test', 42, 'foo', 7]
+console.log('task5 old', task5Old(['test', 42], { name: 'foo', val: 7 })); // ['test', 42, 'foo', 7]
+console.log('task5 new', task5New(['test', 42], { name: 'foo', val: 7 })); // ['test', 42, 'foo', 7]
 
 console.log('6=============');
 

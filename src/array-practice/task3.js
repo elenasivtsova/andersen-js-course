@@ -11,11 +11,11 @@
  */
 
 export function forEachRight(array, callback) {
-    if (!array || !callback) {
-        return;
-    }
+  if (!array || !callback) {
+    return;
+  }
 
-    for (let i = array.length - 1; i >= 0; i--) {
-        callback(array[i]);
-    }
+  for (let i = array.length - 1; i >= 0; i--) {
+    callback(array[i]);
+  }
 }

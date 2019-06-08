@@ -18,10 +18,10 @@
 // ];
 
 export function membersOnActiveMeetups(meetups) {
-    return meetups.reduce((previousValue, item) => {
-        if (item.isActive) {
-            previousValue += item.members;
-        }
-        return previousValue;
-    }, 0);
+  return meetups.reduce((previousValue, item) => {
+    if (item.isActive) {
+      previousValue += item.members;
+    }
+    return previousValue;
+  }, 0);
 }

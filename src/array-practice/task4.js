@@ -9,14 +9,14 @@
  */
 
 export function union(arrayOne, arrayTwo) {
-    let arrayResult = [];
+  let arrayResult = [];
 
-    arrayResult = arrayResult.concat(arrayOne);
-    arrayResult = arrayResult.concat(arrayTwo);
+  arrayResult = arrayResult.concat(arrayOne);
+  arrayResult = arrayResult.concat(arrayTwo);
 
-    arrayResult = arrayResult.filter(function (item, pos) {
-        return arrayResult.indexOf(item) == pos
-    });
+  arrayResult = arrayResult.filter(function(item, pos) {
+    return arrayResult.indexOf(item) == pos;
+  });
 
-    return arrayResult;
+  return arrayResult;
 }

@@ -2,7 +2,10 @@
   "name": "andersen-js-course",
   "version": "1.0.0",
   "private": true,
-  "repository": "https://github.com/VictorDanilov/andersen-js-course.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VictorDanilov/andersen-js-course.git"
+  },
   "author": "Viktor Danilov <wikslayer@gmail.com>",
   "license": "MIT",
   "scripts": {
@@ -20,5 +23,12 @@
     "webpack": "^4.32.2",
     "webpack-cli": "^3.3.2",
     "webpack-dev-server": "^3.5.0"
-  }
+  },
+  "description": "Репозиторий с задачами для курса Andersen JS. Вам необходимо сделать fork этого репозитория, чтобы начать работу над задачами в рамках курса.",
+  "bugs": {
+    "url": "https://github.com/VictorDanilov/andersen-js-course/issues"
+  },
+  "homepage": "https://github.com/VictorDanilov/andersen-js-course#readme",
+  "main": "webpack.config.js",
+  "keywords": []
 }

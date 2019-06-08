@@ -11,17 +11,17 @@
  * console.log(indexOfAll([1, 2, 3], 4)); -> []
  */
 
-
 export function indexOfAll(array, value) {
-    if (!array) {
-        return
-    }
+  if (!array) {
+    return;
+  }
 
-    let indexes = [], i = -1;
+  let indexes = [],
+    i = -1;
 
-    while ((i = array.indexOf(value, i + 1)) !== -1) {
-        indexes.push(i);
-    }
+  while ((i = array.indexOf(value, i + 1)) !== -1) {
+    indexes.push(i);
+  }
 
-    return indexes;
+  return indexes;
 }

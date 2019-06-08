@@ -13,16 +13,16 @@
  */
 
 export function take(array, value = 0) {
-    if (!array) {
-        return;
-    }
+  if (!array) {
+    return;
+  }
 
-    let from = value >= array.length ? array.length : value;
-    let result = [];
+  let from = value >= array.length ? array.length : value;
+  let result = [];
 
-    for (let i = 0; i < from; i++) {
-        result.push(array[i]);
-    }
-    
-    return result;
+  for (let i = 0; i < from; i++) {
+    result.push(array[i]);
+  }
+
+  return result;
 }

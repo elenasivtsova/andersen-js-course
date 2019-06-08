@@ -22,15 +22,15 @@
  */
 
 export function transformArrayToNumber(array, callback, start = 0) {
-    if (!array || !callback) {
-        return;
-    }
+  if (!array || !callback) {
+    return;
+  }
 
-    var result = start;
+  var result = start;
 
-    array.forEach((item) => {
-        result = callback(result, item);
-    });
+  array.forEach(item => {
+    result = callback(result, item);
+  });
 
-    return result;
+  return result;
 }

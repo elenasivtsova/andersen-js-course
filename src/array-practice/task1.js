@@ -16,7 +16,7 @@
  */
 
 export function any(array, callback = x => !!x) {
-    return !!(array.some(callback));
+  return !!array.some(callback);
 }
 
 // export function any(array, callback) {

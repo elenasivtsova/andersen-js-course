@@ -15,14 +15,14 @@
  */
 
 export function createGenerator(array) {
-    var i = 0;
-    var a = {};
+  var i = 0;
+  var a = {};
 
-    a.next = function () {
-       return i < array.length ? array[i++] : 'Complete!';
-    };
+  a.next = function() {
+    return i < array.length ? array[i++] : 'Complete!';
+  };
 
-    return a;
+  return a;
 }
 
 // export function createGenerator2(array) {

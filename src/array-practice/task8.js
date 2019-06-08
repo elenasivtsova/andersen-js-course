@@ -13,22 +13,21 @@
  */
 
 export function without(array, ...values) {
+  if (!array) {
+    return;
+  }
 
-    if (!array) {
-        return;
+  if (!values) {
+    return [...array];
+  }
+
+  let result = [];
+
+  array.forEach(item => {
+    if (values.indexOf(item) < 0) {
+      result.push(item);
     }
+  });
 
-    if (!values) {
-        return [...array];
-    }
-
-    let result = [];
-
-    array.forEach((item) => {
-        if (values.indexOf(item) < 0) {
-            result.push(item);
-        }
-    });
-
-    return result;
+  return result;
 }
