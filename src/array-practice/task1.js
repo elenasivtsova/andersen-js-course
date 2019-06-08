@@ -18,20 +18,3 @@
 export function any(array, callback = x => !!x) {
   return !!array.some(callback);
 }
-
-// export function any(array, callback) {
-//     if (!callback && array.some(x=> !!x) || callback && array.some(callback)) {
-//         return true;
-//     } else {
-//         return false
-//     }
-// }
-
-// export function any(array, callback) {
-//     for (let i = 0; i < array.length; i++) {
-//         if (callback && callback(array[i]) || !callback && array[i]) {
-//             return true;
-//         }
-//     }
-//     return false;
-// }
