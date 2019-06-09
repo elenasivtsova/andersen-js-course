@@ -18,31 +18,9 @@ export function createGenerator(array) {
   var i = 0;
   var a = {};
 
-  a.next = function() {
+  a.next = function () {
     return i < array.length ? array[i++] : 'Complete!';
   };
 
   return a;
 }
-
-// export function createGenerator2(array) {
-//     var i = 0;
-//
-//     return {
-//         next: function () {
-//             if (i < array.length) {
-//                 return array[i++];
-//             } else {
-//                 return 'Complete!'
-//             }
-//         }
-//     }
-// }
-
-// a.next = function () {
-//     if (i < array.length) {
-//         return array[i++];
-//     } else {
-//         return 'Complete!'
-//     }
-// };

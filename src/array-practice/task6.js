@@ -26,11 +26,8 @@ export function transformArrayToNumber(array, callback, start = 0) {
     return;
   }
 
-  var result = start;
-
-  array.forEach(item => {
-    result = callback(result, item);
-  });
+  array.push(start);
+  const result = array.reduce(callback);
 
   return result;
 }

@@ -16,12 +16,10 @@ export function indexOfAll(array, value) {
     return;
   }
 
-  let indexes = [],
-    i = -1;
-
-  while ((i = array.indexOf(value, i + 1)) !== -1) {
-    indexes.push(i);
-  }
-
-  return indexes;
+  return array.reduce((res, item, index) => {
+    if (item === value) {
+      res.push(index);
+    }
+    return res;
+  }, []);
 }

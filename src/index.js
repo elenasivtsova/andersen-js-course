@@ -67,8 +67,8 @@ console.log(transformArrayToNumber([10, 20, 30], (acc, item) => acc - item)); //
 
 console.log('7=============');
 
-console.log(take([1, 2, 3], 5)); // [1, 2, 3]
-console.log(take([1, 2, 3], 2)); // [1, 2]
+console.log(take([1, 2, 3])); // [1, 2, 3]
+console.log(take([1, 2, 3])); // [1, 2]
 
 console.log('8=============');
 
@@ -92,6 +92,7 @@ const meetups = [
 console.log(membersOnActiveMeetups(meetups));
 
 //----------------------------------------------------------------------------------//
+
 
 import { task1Old, task1New } from './es-features/task1';
 import { task2Old, task2New } from './es-features/task2';

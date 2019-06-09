@@ -21,13 +21,9 @@ export function without(array, ...values) {
     return [...array];
   }
 
-  let result = [];
-
-  array.forEach(item => {
-    if (values.indexOf(item) < 0) {
-      result.push(item);
-    }
+  array = array.filter(function (el) {
+    return values.indexOf(el) < 0;
   });
 
-  return result;
+  return array;
 }

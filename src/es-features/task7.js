@@ -11,7 +11,7 @@ export function task7Old() {
   var obj = { test: 0 };
   var obj2 = { foo: 1, bar: 2 };
 
-  Object.keys(obj2).forEach(function(k) {
+  Object.keys(obj2).forEach(function (k) {
     obj[k] = obj2[k];
   });
 
@@ -25,11 +25,5 @@ export function task7New() {
   var obj = { test: 0 };
   var obj2 = { foo: 1, bar: 2 };
 
-  for (let k in obj2) {
-    if (obj2.hasOwnProperty(k)) {
-      obj[k] = obj2[k];
-    }
-  }
-
-  return obj; // obj = {test: 0, foo: 1, bar: 2}
+  return Object.assign(obj, obj2);
 }

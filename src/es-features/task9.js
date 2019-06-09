@@ -7,7 +7,7 @@
 
 export function task9Old() {
   var result = 'test'.indexOf('est') !== -1;
-  var findResult = [22, 1, 90, 70].filter(function(x) {
+  var findResult = [22, 1, 90, 70].filter(function (x) {
     return x < 3;
   })[0];
 
@@ -18,8 +18,8 @@ export function task9Old() {
 // При желании, можете использовать стрелочную функцию, вместо обычной
 
 export function task9New() {
-  var result = 'test'.indexOf('est') !== -1;
-  var findResult = [22, 1, 90, 70].filter(x => x < 3)[0];
+  var result = 'test'.includes('est');
+  var findResult = [22, 1, 90, 70].filter(x => x < 3);
 
-  return [result, findResult];
+  return [result, findResult].flat(Infinity);
 }

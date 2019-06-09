@@ -12,17 +12,12 @@
  * console.log(take([1, 2, 3], 2)); -> [1, 2]
  */
 
-export function take(array, value = 0) {
+export function take(array, value = array.length) {
   if (!array) {
     return;
   }
 
-  let from = value >= array.length ? array.length : value;
-  let result = [];
+  array.splice(value);
 
-  for (let i = 0; i < from; i++) {
-    result.push(array[i]);
-  }
-
-  return result;
+  return array;
 }

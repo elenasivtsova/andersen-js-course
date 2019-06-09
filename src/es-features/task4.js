@@ -32,11 +32,11 @@ export function task4Old() {
 
 export function task4New(x = 10, y = 20) {
   var obj = {
-    x: x,
-    y: y,
-    bar: function bar() {
+    x,
+    y,
+    bar() {
       return this.x + this.y;
-    },
+    }
   };
 
   function foo() {
