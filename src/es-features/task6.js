@@ -38,7 +38,7 @@ export function task6New() {
     };
   };
 
-  const { name, value, role: { name: roleName }, isActive, cases } = tmp();
+  const { name, value, role: { name: roleName }, isActive = false, cases: { 0: { id } } } = tmp();
 
-  return [name, value, roleName, isActive === undefined ? false : isActive, cases[0].id];
+  return [name, value, roleName, isActive, id];
 }

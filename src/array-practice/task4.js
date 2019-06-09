@@ -9,29 +9,9 @@
  */
 
 export function union(arrayOne, arrayTwo) {
-  let arrayResult = new Set();
-
-  arrayOne.concat(arrayTwo).forEach((item) => {
-    arrayResult.add(item);
-  });
-
-  return Array.from(arrayResult);
+  return [...new Set([...arrayOne, ...arrayTwo])];
 }
 
-/*
-export function union(arrayOne, arrayTwo) {
-  let arrayResult = new Set();
-
-
-  const check = (arr) => {
-    arr.forEach((item) => {
-      arrayResult.add(item);
-    });
-  };
-
-  check(arrayOne);
-  check(arrayTwo);
-
-  return Array.from(arrayResult);
-}
-*/
+// [...arrayOne, ...arrayTwo] - склеиваем массив
+// Переобразовываем в SET, и тут как раз не будет повторений
+// Потом переобразовываем братно в массив

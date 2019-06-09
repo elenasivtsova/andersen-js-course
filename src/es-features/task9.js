@@ -19,7 +19,7 @@ export function task9Old() {
 
 export function task9New() {
   var result = 'test'.includes('est');
-  var findResult = [22, 1, 90, 70].filter(x => x < 3)[0];
+  var findResult = [22, 1, 90, 70].find(x => x < 3);
 
   return [result, findResult];
 }

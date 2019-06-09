@@ -17,6 +17,15 @@
  */
 
 export function arrayDiff(arrayOne, arrayTwo) {
+  return [...arrayOne, ...arrayTwo].filter((item) => {
+    if (!arrayOne.includes(item) || !arrayTwo.includes(item)) {
+      return true;
+    }
+  });
+}
+
+/*
+export function arrayDiff(arrayOne, arrayTwo) {
   let arrayResult = [];
   let check = (array1, array2) => {
     return array1.filter((item) => {
@@ -31,3 +40,4 @@ export function arrayDiff(arrayOne, arrayTwo) {
 
   return arrayResult;
 }
+*/
