@@ -9,14 +9,29 @@
  */
 
 export function union(arrayOne, arrayTwo) {
-  let arrayResult = [];
+  let arrayResult = new Set();
 
-  arrayResult = arrayResult.concat(arrayOne);
-  arrayResult = arrayResult.concat(arrayTwo);
-
-  arrayResult = arrayResult.filter(function(item, pos) {
-    return arrayResult.indexOf(item) == pos;
+  arrayOne.concat(arrayTwo).forEach((item) => {
+    arrayResult.add(item);
   });
 
-  return arrayResult;
+  return Array.from(arrayResult);
 }
+
+/*
+export function union(arrayOne, arrayTwo) {
+  let arrayResult = new Set();
+
+
+  const check = (arr) => {
+    arr.forEach((item) => {
+      arrayResult.add(item);
+    });
+  };
+
+  check(arrayOne);
+  check(arrayTwo);
+
+  return Array.from(arrayResult);
+}
+*/

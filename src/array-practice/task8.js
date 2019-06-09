@@ -22,7 +22,7 @@ export function without(array, ...values) {
   }
 
   array = array.filter(function (el) {
-    return values.indexOf(el) < 0;
+    return !values.includes(el);
   });
 
   return array;

@@ -18,9 +18,9 @@
 // ];
 
 export function membersOnActiveMeetups(meetups) {
-  return meetups.reduce((previousValue, item) => {
-    if (item.isActive) {
-      previousValue += item.members;
+  return meetups.reduce((previousValue, { isActive, members }) => {
+    if (isActive) {
+      previousValue += members;
     }
     return previousValue;
   }, 0);

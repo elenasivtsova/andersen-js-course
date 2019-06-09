@@ -16,11 +16,11 @@
 
 export function createGenerator(array) {
   var i = 0;
-  var a = {};
 
-  a.next = function () {
-    return i < array.length ? array[i++] : 'Complete!';
-  };
 
-  return a;
+  return {
+    next() {
+      return i < array.length ? array[i++] : 'Complete!';
+    }
+  }
 }

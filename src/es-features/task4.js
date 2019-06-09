@@ -36,14 +36,15 @@ export function task4New(x = 10, y = 20) {
     y,
     bar() {
       return this.x + this.y;
-    }
+    },
+    [`baz${foo()}`]: 'new field'
   };
 
   function foo() {
     return 'test';
   }
 
-  obj[`baz${foo()}`] = 'new field';
+  obj
 
   return obj;
 }

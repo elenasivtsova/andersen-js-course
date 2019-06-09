@@ -19,16 +19,15 @@
 export function arrayDiff(arrayOne, arrayTwo) {
   let arrayResult = [];
   let check = (array1, array2) => {
-    return array1.reduce((res, item) => {
-      if (array2.indexOf(item) < 0) {
-        res.push(item);
+    return array1.filter((item) => {
+      if (!array2.includes(item)) {
+        return true;
       }
-      return res;
-    }, []);
+    });
   };
 
-  arrayResult = [...arrayResult, check(arrayOne, arrayTwo)];
-  arrayResult = [...arrayResult, check(arrayTwo, arrayOne)];
+  arrayResult = [...arrayResult, ...check(arrayOne, arrayTwo)];
+  arrayResult = [...arrayResult, ...check(arrayTwo, arrayOne)];
 
   return arrayResult;
 }

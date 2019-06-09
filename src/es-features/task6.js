@@ -29,12 +29,16 @@ export function task6Old() {
 // При желании, можете использовать стрелочную функцию, вместо обычной
 
 export function task6New() {
-  var tmp = {
-    name: 'Max',
-    value: 100,
-    role: { name: 'Admin' },
-    cases: [{ id: '1' }]
+  var tmp = () => {
+    return {
+      name: 'Max',
+      value: 100,
+      role: { name: 'Admin' },
+      cases: [{ id: '1' }]
+    };
   };
 
-  return [tmp.name, tmp.value, tmp.role.name, tmp.isActive === undefined ? false : tmp.isActive, tmp.cases[0].id];
+  const { name, value, role: { name: roleName }, isActive, cases } = tmp();
+
+  return [name, value, roleName, isActive === undefined ? false : isActive, cases[0].id];
 }

@@ -17,7 +17,5 @@ export function take(array, value = array.length) {
     return;
   }
 
-  array.splice(value);
-
-  return array;
+  return array.slice(0, value);
 }

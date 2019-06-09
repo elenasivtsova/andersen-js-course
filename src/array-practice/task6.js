@@ -26,8 +26,7 @@ export function transformArrayToNumber(array, callback, start = 0) {
     return;
   }
 
-  array.push(start);
-  const result = array.reduce(callback);
+  const result = array.reduce(callback, start);
 
   return result;
 }
