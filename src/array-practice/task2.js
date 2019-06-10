@@ -17,11 +17,7 @@
  */
 
 export function arrayDiff(arrayOne, arrayTwo) {
-  return [...arrayOne, ...arrayTwo].filter((item) => {
-    if (!arrayOne.includes(item) || !arrayTwo.includes(item)) {
-      return true;
-    }
-  });
+  return [...arrayOne, ...arrayTwo].filter(item => !arrayOne.includes(item) || !arrayTwo.includes(item));
 }
 
 /*
