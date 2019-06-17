@@ -15,3 +15,25 @@
  * console.log(arrayDiff([1, 2, 3], [1, 2, 4])); -> [3, 4]
  * console.log(arrayDiff([1, 3, 3, 4], [1, 3, '4'])); -> [4, '4']
  */
+
+export function arrayDiff(arrayOne, arrayTwo) {
+  return [...arrayOne, ...arrayTwo].filter(item => !arrayOne.includes(item) || !arrayTwo.includes(item));
+}
+
+/*
+export function arrayDiff(arrayOne, arrayTwo) {
+  let arrayResult = [];
+  let check = (array1, array2) => {
+    return array1.filter((item) => {
+      if (!array2.includes(item)) {
+        return true;
+      }
+    });
+  };
+
+  arrayResult = [...arrayResult, ...check(arrayOne, arrayTwo)];
+  arrayResult = [...arrayResult, ...check(arrayTwo, arrayOne)];
+
+  return arrayResult;
+}
+*/
