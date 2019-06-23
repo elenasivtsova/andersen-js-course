@@ -83,7 +83,7 @@ class View extends EventEmitter {
     const arrProductsNew = getArrProducts();
 
     if (arrProductsNew.length == 0) {
-      alert('Ваш стол пуст!');
+      alert('Ваш стол крафтинга пуст!');
     } else {
       var trueRecipe = false;
 
@@ -108,11 +108,11 @@ class View extends EventEmitter {
     event.preventDefault();
 
     if (!this.inputRecipes.value) {
-      return alert('Необходимо заполнить название рецепта!');
+      return alert('Введите название рецепта!');
     }
 
     if (getArrProducts().length == 0) {
-      return alert('На столе нет продуктов, чтобы добавить новый рецепт!');
+      return alert('На столе крафтинга нет продуктов, чтобы добавить новый рецепт!');
     }
 
     const value = this.inputRecipes.value;
@@ -124,7 +124,7 @@ class View extends EventEmitter {
     event.preventDefault();
 
     if (!this.input.value) {
-      return alert('Необходимо ввести имя ингредиента!');
+      return alert('Введите название ингредиента!');
     }
 
     const value = this.input.value;
@@ -173,14 +173,14 @@ class View extends EventEmitter {
         JSON.stringify(getArrProducts())
       ) {
         checkRecipes = true;
-        return alert('Блюдо с такими ингридиентами уже есть!');
+        return alert('Рецепт с такими ингридиентами уже есть!');
       }
     });
 
     this.arrObjects.forEach(obj => {
       if (!checkRecipes && obj.name == this.inputRecipes.value) {
         checkRecipes = true;
-        return alert('Блюдо с таким именем уже есть!');
+        return alert('Рецепт с таким названием уже есть!');
       }
     });
 

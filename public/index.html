@@ -3,13 +3,18 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-        <title>Crafting</title>
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <title>Кофейня</title>
+        <link rel="shortcut icon" href="cafe.png" type="image/x-icon">
         <link rel="stylesheet" href="css/app.css">
     </head>
 
 <body>
-    <h3>В первой колонке указаны рецепты, во второй ингредиенты, а третья - это стол. Перенося ингредиенты на стол вы можете добавить блюда либо добавить новый рецепт</h3>
+    <h1 align="center">Добро пожаловать в кофейню!</h1>
+    <h2>Прежде чем начать, ознакомьтесь:</h2>
+    <p>-> Первая колонка - <U>рецепты</U>.</p>
+    <p>-> Вторая - стол с <U>ингредиентами</U>.</p>
+    <p>-> Третья - стол крафтинга. Перенося ингредиенты на стол, вы можете добавлять <U>блюда</U> либо <U>новый рецепт</U>.</p>
+
     <div id="div3">
         <div class="tab">
             <input type="radio" id="tab1" name="tab-group">
@@ -39,7 +44,7 @@
 
     <form id="todo-form">
         <input id="add-input" type="text" placeholder='Новый ингредиент'>
-        <button id="add-button" type="submit">Добавить</button>
+        <button id="add-button" type="submit">Добавить ингредиент</button>
     </form>
     <form id="todo-form3">
         <input id="add-input3" type="text" placeholder='Название рецепта'>
@@ -47,8 +52,7 @@
     </form>
 
     <form id="todo-form2">
-        <p><b>Добавить блюдо:</b>
-        <button id="add-button2" type="submit">Создать блюдо</button>
+        <button id="add-button2" type="submit">Скрафтить по рецепту блюдо</button>
     </form>
 </main>
 

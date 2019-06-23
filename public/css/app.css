@@ -1,6 +1,7 @@
 body {
+    background: url(/table.jpg);
     background-color: #fafafa;
-    color: #757575;
+    
     font-family: 'Consolas', Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 1em;
@@ -16,7 +17,7 @@ button {
     background: 0 0;
     border: none;
     border-radius: 2px;
-    color: #757575;
+    color: #111111;
     position: relative;
     height: 36px;
     margin: 0;
@@ -73,10 +74,10 @@ button .material-icons {
 input {
     font-family: 'Consolas', Arial, Helvetica, sans-serif;
     font-size: 1rem;
-    color: #757575;
+    color: #000000;
     padding: .5em;
     border-radius: 2px;
-    border: 1px solid lightgray;
+    border: 1px solid rgb(98, 12, 116);
     outline: none;
 }
 
@@ -94,14 +95,14 @@ header {
     align-items: center;
     padding: 0 1rem;
     color: white;
-    background-color: #9c0a70;
+    background-color: #c9155a;
     text-align: center;
     text-transform: uppercase;
 }
 
 header h1 {
     display: inline-block;
-    color: #323330;
+    color: #000000;
     margin: 1rem auto;
 }
 
@@ -206,11 +207,11 @@ b {
 }
 
 #todo-form input:focus {
-    border: 1px solid #f0db4f;
+    border: 1px solid #ce0a5c;
 }
 
 #todo-form3 input:focus {
-    border: 1px solid #f0db4f;
+    border: 1px solid #ce0a5c;
 }
 
 #todo-form button {
@@ -218,10 +219,14 @@ b {
 }
 
 #todo-form3 button {
-    margin-left: 10px;
+    margin-left: 39px;
 }
-
+#todo-form2 button {
+    margin-left: 70px;
+    border: 1px solid #ce0a5c;
+}
 #div1, #div2, #div3 {
+    background-color: #fdedfd;
     height: 500px;
     float: left;
     width: 20%;
@@ -254,19 +259,21 @@ a {
 }
 
 #div1 a {
-    background: #BA55D3;
+    background: rgb(44, 47, 201);
+    border: 1px solid rgb(0, 0, 0);
 }
 #div2 a {
-    background: #DB7093;
+    background: rgba(6, 141, 18, 0.699);
+    border: 1px solid rgb(0, 0, 0);
 }
 
 
 .tab input, .tab-content { display: none; }
 .tab {
     font: 0.8rem/1.2 Arial, sans-serif; /* Параметры шрифта */
-   border: 1px solid #e9eaec; /* Параметры рамки */
+   border: 1px solid rgb(182, 73, 0); /* Параметры рамки */
     border-radius: 3px; /* Скругляем уголки */
-    color: #848994; /* Цвет текста */
+    color: #000000; /* Цвет текста */
     margin-bottom: 10px; /* Расстояние между пунктами */
 }
 .tab-title {
@@ -284,7 +291,7 @@ a {
     padding: 10px 20px; /* Поля вокруг текста */
 }
 .tab :checked + .tab-title {
-    background-color: #DA70D6; /* Цвет фона */
+    background-color: rgb(182, 73, 0); /* Цвет фона */
     border-radius: 3px 3px 0 0; /* Скругляем уголки */
     color: #fff; /* Цвет текста */
 }
