@@ -1,33 +1,35 @@
 class Controller {
-    constructor(model, view) {
-        this.model = model;
-        this.view = view;
-        
-        view.on('add', this.addTodo.bind(this));
-        view.on('addRecipes', this.addTodoRecipes.bind(this));
+  constructor(model, view) {
+    this.model = model;
+    this.view = view;
 
-        view.show(model.items);
-        view.show3(model.items);
-    }
+    // Подписка на добавление ингредиентов
+    view.on('add', this.addTodo.bind(this));
+    // Подписка на добавление рецептов
+    view.on('addRecipes', this.addTodoRecipes.bind(this));
 
-    addTodo(title) {
-        const item = this.model.addItem({
-            id: Date.now(),
-            title,
-            completed: false
-        });
+    view.show(model.items);
+    view.showRecipes(model.items);
+  }
 
-        this.view.addItem(item);
-    }
-    addTodoRecipes(title) {
-        const item = this.model.addItemRecipes({
-            id: Date.now(),
-            title,
-            completed: false
-        });
+  addTodo(title) {
+    const item = this.model.addItem({
+      id: Date.now(),
+      title,
+      completed: false
+    });
 
-        this.view.addItemRecipes(item);
-    }
+    this.view.addItem(item);
+  }
+  addTodoRecipes(title) {
+    const item = this.model.addItemRecipes({
+      id: Date.now(),
+      title,
+      completed: false
+    });
+
+    this.view.addItemRecipes(item);
+  }
 }
 
 export default Controller;

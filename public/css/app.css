@@ -94,7 +94,7 @@ header {
     align-items: center;
     padding: 0 1rem;
     color: white;
-    background-color: #f0db4f;
+    background-color: #9c0a70;
     text-align: center;
     text-transform: uppercase;
 }
@@ -204,6 +204,7 @@ b {
     outline: none;
     transition: all .2s;
 }
+
 #todo-form input:focus {
     border: 1px solid #f0db4f;
 }
@@ -238,6 +239,7 @@ b {
     margin: 10px;
     padding: 10px;
 }
+
 a {
     text-decoration: none;
     color: #fff;
@@ -246,48 +248,49 @@ a {
     border-radius: 5px;
     margin-bottom: 5px;
 }
+
 .todo-item{
-padding: 5px;
+    padding: 5px;
 }
 
 #div1 a {
-    background: brown;
+    background: #BA55D3;
 }
 #div2 a {
-    background: darkgreen;
+    background: #DB7093;
 }
 
 
 .tab input, .tab-content { display: none; }
 .tab {
- font: 0.8rem/1.2 Arial, sans-serif; /* Параметры шрифта */
- border: 1px solid #e9eaec; /* Параметры рамки */
- border-radius: 3px; /* Скругляем уголки */
- color: #848994; /* Цвет текста */
- margin-bottom: 10px; /* Расстояние между пунктами */
+    font: 0.8rem/1.2 Arial, sans-serif; /* Параметры шрифта */
+   border: 1px solid #e9eaec; /* Параметры рамки */
+    border-radius: 3px; /* Скругляем уголки */
+    color: #848994; /* Цвет текста */
+    margin-bottom: 10px; /* Расстояние между пунктами */
 }
 .tab-title {
- padding: 10px; /* Поля вокруг текста */
- display: block; /* Блочный элемент */
- text-transform: uppercase; /* Все буквы заглавные */
- font-weight: bold; /* Жирное начертание */
- cursor: pointer; /* Вид курсора */
+    padding: 10px; /* Поля вокруг текста */
+    display: block; /* Блочный элемент */
+    text-transform: uppercase; /* Все буквы заглавные */
+    font-weight: bold; /* Жирное начертание */
+    cursor: pointer; /* Вид курсора */
 }
 .tab-title::after {
- content: '+'; /* Выводим плюс */
- float: right; /* Размещаем по правому краю */
+    content: '+'; /* Выводим плюс */
+    float: right; /* Размещаем по правому краю */
 }
 .tab-content {
- padding: 10px 20px; /* Поля вокруг текста */
+    padding: 10px 20px; /* Поля вокруг текста */
 }
 .tab :checked + .tab-title {
- background-color: #50a2de; /* Цвет фона */
- border-radius: 3px 3px 0 0; /* Скругляем уголки */
- color: #fff; /* Цвет текста */
+    background-color: #DA70D6; /* Цвет фона */
+    border-radius: 3px 3px 0 0; /* Скругляем уголки */
+    color: #fff; /* Цвет текста */
 }
 .tab :checked + .tab-title::after {
- content: '−'; /* Выводим минус */
+    content: '−'; /* Выводим минус */
 }
 .tab :checked ~ .tab-content {
- display: block; /* Показываем содержимое */
+    display: block; /* Показываем содержимое */
 }

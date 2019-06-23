@@ -7,6 +7,7 @@
     "build": "webpack"
   },
   "devDependencies": {
+    "prettier": "1.18.2",
     "webpack": "^2.6.1",
     "webpack-dev-server": "^2.4.5"
   }

@@ -1,94 +1,90 @@
-import {drag, drop, allowDrow} from './drag';
-
+// Создание элементов
 function createElement(tag, props, ...children) {
-    const element = document.createElement(tag);
+  const element = document.createElement(tag);
 
-    Object.keys(props).forEach(key => {
-
-    element.addEventListener("dragstart", drag);
+  Object.keys(props).forEach(key => {
+    element.addEventListener('dragstart', drag);
 
     if (key.startsWith('for')) {
-        element.setAttribute(key, props[key]);
+      element.setAttribute(key, props[key]);
     } else {
-        element[key] = props[key];
+      element[key] = props[key];
     }
-    });
+  });
 
-    children.forEach(child => {
-        if (typeof child === 'string') {
-            child = document.createTextNode(child);
-        }
+  children.forEach(child => {
+    if (typeof child === 'string') {
+      child = document.createTextNode(child);
+    }
 
-        element.appendChild(child);
-    });
+    element.appendChild(child);
+  });
 
-    return element;
+  return element;
 }
 
-
 // drag and drop
-
+//Массив ингредиентов стола
 var arr = [];
 function allowDrow(ev) {
-    ev.preventDefault();
+  ev.preventDefault();
 }
 
 function drag(ev) {
-    ev.dataTransfer.setData("text", ev.target.id);
-    ev.dataTransfer.setData("content", ev.target.textContent);
+  ev.dataTransfer.setData('text', ev.target.id);
+  ev.dataTransfer.setData('content', ev.target.textContent);
 }
 
 function drop(ev, block) {
-    ev.preventDefault();
-    var data = ev.dataTransfer.getData("text");
-    var content = ev.dataTransfer.getData("content");
-    if(block.id == "div2"){
-        arr.push(content);
-    }
-        
-    if(block.id == "div1"){   
-        arr.splice(arr.indexOf(content), 1);  
-    }
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData('text');
+  var content = ev.dataTransfer.getData('content');
+  if (block.id == 'div2') {
+    arr.push(content);
+  }
 
-    block.appendChild(document.getElementById(data));
+  if (block.id == 'div1') {
+    arr.splice(arr.indexOf(content), 1);
+  }
+
+  block.appendChild(document.getElementById(data));
 }
 
-document.getElementById('drag-1').addEventListener("dragstart", drag);
-document.getElementById('drag-2').addEventListener("dragstart", drag);
-document.getElementById('drag-3').addEventListener("dragstart", drag);
+// Подписка на события
+document.getElementById('drag-1').addEventListener('dragstart', drag);
+document.getElementById('drag-2').addEventListener('dragstart', drag);
+document.getElementById('drag-3').addEventListener('dragstart', drag);
 
-document.getElementById('div1').addEventListener("drop", function(e){
-    drop(e, this);
+document.getElementById('div1').addEventListener('drop', function(e) {
+  drop(e, this);
 });
-document.getElementById('div2').addEventListener("drop", function(e){
-    drop(e, this);
+document.getElementById('div2').addEventListener('drop', function(e) {
+  drop(e, this);
 });
 
-document.getElementById('div1').addEventListener("dragover", allowDrow);
-document.getElementById('div2').addEventListener("dragover", allowDrow);
-
+document.getElementById('div1').addEventListener('dragover', allowDrow);
+document.getElementById('div2').addEventListener('dragover', allowDrow);
 
 //Получить список продуктов на столе
-function getArrProducts(){
-    return arr.sort();
+function getArrProducts() {
+  return arr.sort();
 }
-
 
 class EventEmitter {
-    constructor() {
-        this.events = {};
-    }
+  constructor() {
+    this.events = {};
+  }
 
-    on(type, listener) {
-        this.events[type] = this.events[type] || [];
-        this.events[type].push(listener);
-    }
+  on(type, listener) {
+    this.events[type] = this.events[type] || [];
+    this.events[type].push(listener);
+  }
 
-    emit(type, arg) {
-        if (this.events[type]) {
-            this.events[type].forEach(listener => listener(arg));
-        }
+  emit(type, arg) {
+    if (this.events[type]) {
+      this.events[type].forEach(listener => listener(arg));
     }
+  }
 }
 
-export { createElement, EventEmitter, getArrProducts};
+export { createElement, EventEmitter, getArrProducts };

@@ -1,27 +1,27 @@
 import { EventEmitter } from './helpers';
 
 class Model extends EventEmitter {
-    constructor(items = []) {
-        super();
-        
-        this.items = items;
-    }
+  constructor(items = []) {
+    super();
 
-    getItem(id) {
-        return this.items.find(item => item.id == id);
-    }
+    this.items = items;
+  }
 
-    addItem(item) {
-        this.items.push(item);
-        this.emit('change', this.items);
-        return item;
-    }
+  getItem(id) {
+    return this.items.find(item => item.id == id);
+  }
 
-    addItemRecipes(item) {
-        this.items.push(item);
-        this.emit('change', this.items);
-        return item;
-    }
+  addItem(item) {
+    this.items.push(item);
+    this.emit('change', this.items);
+    return item;
+  }
+
+  addItemRecipes(item) {
+    this.items.push(item);
+    this.emit('change', this.items);
+    return item;
+  }
 }
 
 export default Model;
