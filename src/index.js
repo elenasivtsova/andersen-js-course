@@ -1,4 +1,7 @@
-import './styles/main.css';
+import Model from './model';
+import View from './view';
+import Controller from './controller';
 
-// eslint-disable-next-line no-console
-console.log('Hi');
+const model = new Model();
+const view = new View();
+const controller = new Controller(model, view);
