@@ -1,21 +1,10 @@
+import request from './request.helper';
+
 /* eslint-disable camelcase */
 /* eslint-disable no-console */
 /* eslint-disable no-await-in-loop */
 /* eslint-disable no-undef */
 const task5 = () => {
-  const request = url => {
-    return new Promise((resolve, reject) => {
-      fetch(url)
-        .then(response => {
-          response
-            .json()
-            .then(resolve)
-            .catch(reject);
-        })
-        .catch(reject);
-    });
-  };
-
   (async () => {
     const urls = [
       'https://www.json-generator.com/api/json/get/cevhxOsZnS',

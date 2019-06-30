@@ -7,7 +7,7 @@ export async function foo(url) {
   try {
     const data = await getUsers(url);
     const jsonData = await data.json();
-    console.log(jsonData);
+    console.log(jsonData.length ? jsonData[0] : 'Пусто');
   } catch (err) {
     console.log(err.message);
   }
