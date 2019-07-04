@@ -9,9 +9,7 @@ router.get('/', async (req, res) => {
 });
 
 router.get('/:messageId', async (req, res) => {
-  const message = await req.context.models.Message.findById(
-    req.params.messageId,
-  );
+  const message = await req.context.models.Message.findById(req.params.messageId);
   return res.send(message);
 });
 
@@ -25,9 +23,7 @@ router.post('/', async (req, res) => {
 });
 
 router.delete('/:messageId', async (req, res) => {
-  const message = await req.context.models.Message.findById(
-    req.params.messageId,
-  );
+  const message = await req.context.models.Message.findById(req.params.messageId);
 
   let result = null;
   if (message) {

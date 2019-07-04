@@ -26,16 +26,13 @@ app.use('/messages', routes.message);
 
 connectDb().then(async () => {
   if (eraseDatabaseOnSync) {
-    await Promise.all([
-      models.User.deleteMany({}),
-      models.Message.deleteMany({}),
-    ]);
+    await Promise.all([models.User.deleteMany({}), models.Message.deleteMany({})]);
 
     createUsersWithMessages();
   }
 
   app.listen(process.env.PORT, () =>
-    console.log(`Example app listening on port ${process.env.PORT}!`),
+    console.log(`Example app listening on port ${process.env.PORT}!`)
   );
 });
 
