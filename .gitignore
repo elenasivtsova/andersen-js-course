@@ -1,3 +1,8 @@
 node_modules/
 dist/
+<<<<<<< HEAD
 .idea
+=======
+.idea
+.vscode
+>>>>>>> upstream/master
